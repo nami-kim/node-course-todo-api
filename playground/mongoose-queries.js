@@ -19,6 +19,8 @@ User.findById(id).then(
   },
   e => console.log(e)
 )
+
+
 // var id = '5b70af493177dbbc43df612a'
 
 // if (!ObjectID.isValid(id)) {
@@ -43,3 +45,4 @@ User.findById(id).then(
 //   }
 //   console.log('Todo by Id', todo)
 // }).catch((e) => console.log(e))
+
