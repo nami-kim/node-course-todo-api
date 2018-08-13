@@ -7,31 +7,34 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
   }
   console.log('Connected to MongoDB server');
 
-  db.collection('Users').findOneAndUpdate({ 
-    _id: new ObjectID("5b6a0065a23e6b87274cdd13")
-  }, {
-    $set: {
-      name: "Nami Lee"
-    },
-    $inc: {
-      age: 5
-    }
-  }, {
-    returnOriginal: false
-  })
-
- 
-  // db.collection('Todos').findOneAndUpdate(
-  //   { _id: new ObjectID("5b69d09b1395e04741057581")
+  // db.collection('Todos').findOneAndUpdate({
+  //   _id: new ObjectID('5b6f9ab186e87b248913b07f')
   // }, {
-  //   $set: {
-  //     completed: true
-  //   }
-  // }, {
-  //   returnOriginal: false
-  // }).then((result) => {
-  //   console.log(result)
-  // })
+  //     $set: {
+  //       completed: false
+  //     }
+  //   }, {
+  //     returnOriginal: false
+  //   }).then((res) => {
+  //     if (err) {
+  //       return console.log('Unable to update the item')
+  //     }
+  //     console.log('Updated the item', res)
+  //   })
 
+  db.collection('Users').findOneAndUpdate({
+    _id: new ObjectID('5b6fa37fed1d182edd908e71')
+  }, {
+      $set: {
+        name: 'Nami Kim'
+      },
+      $inc: {
+        age: 1
+      }
+    }, {
+      returnOriginal: false
+    }).then((res) => {
+      console.log(res)
+    })
   // db.close();
-});
+})

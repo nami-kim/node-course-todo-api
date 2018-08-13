@@ -1,14 +1,37 @@
 {
   "name": "todo-api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec npm test"
+  },
+  "engines": {
+    "node": "v9.11.1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^2.2.19"
-  }
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^2.2.36",
+    "mongoose": "^5.2.7"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3",
+    "supertest": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nm1077/node-course-todo-api.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/nm1077/node-course-todo-api/issues"
+  },
+  "homepage": "https://github.com/nm1077/node-course-todo-api#readme",
+  "description": ""
 }
